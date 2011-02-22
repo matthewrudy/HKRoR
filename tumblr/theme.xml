@@ -1,38 +1,23 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html>
+<html lang="en">
     <head>
         <meta name="google-site-verification" content="6iVVOttglvHlELHZDCe2AnTyKpk2dTVKUQEz4c4zExE" />
-        <!-- DEFAULT COLORS -->
-        <meta name="color:Background" content="#fff"/>
-        <meta name="color:Title" content="#444"/>
-        <meta name="color:Description" content="#777"/>
-        <meta name="color:Post Title" content="#6498cc"/>    
-        <meta name="color:Text" content="#444"/>
-        <meta name="color:Inline Link" content="#6498cc"/>
-        <meta name="color:Quote" content="#888"/>
-        <meta name="color:Quote Border" content="#6498cc"/>
-        <meta name="color:Quote Source" content="#555"/>
-        <meta name="color:Link Post" content="#c00"/>
-        <meta name="color:Conversation Background 1" content="#f4f4f4"/>
-        <meta name="color:Conversation Background 2" content="#e8e8e8"/>
-        <meta name="color:Conversation Border" content="#bbb"/>
-        <meta name="color:Conversation Text" content="#444"/>
-        <meta name="color:Date" content="#ccc"/>
-        <meta name="color:Date Block" content="#6498cc"/>
-        <meta name="color:Date Block Text" content="#bbd5f1"/>        
-        <!-- END DEFAULT COLORS -->
-
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-        <title>{Title}{block:PostSummary} - {PostSummary}{/block:PostSummary}</title>
+        <title>
+          {Title}{block:PostSummary} - {PostSummary}{/block:PostSummary}
+        </title>
         <link rel="icon" href="{Favicon}"/>
         <link rel="alternate" type="application/rss+xml" title="RSS" href="{RSS}"/>
+        {block:Description}
+          <meta name="description" content="{MetaDescription}" />
+        {/block:Description}
+        
         <meta name="viewport" content="width=800"/> <!-- iPhone -->
 
         <style type="text/css">
             body {
                 margin: 0px;
-                background-color: #eee;
+                background-color: rgb(189,11,11);
                 font-family: 'Lucida Grande', Helvetica, sans-serif;
                 background-image: -webkit-gradient(
                     linear,
@@ -312,8 +297,6 @@
                     }
                     
 						.query { font-weight: bold; }
-						
-            {CustomCSS}
         </style>
     </head>
     <body>
