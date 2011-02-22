@@ -102,7 +102,7 @@
         height: 30px;
         width: 45px;
         background-color: #fff;
-        color: #ccc;
+        color: #666;
         font: Bold 12px Verdana, Sans-Serif;
         text-align: center;
         line-height: 12px;
@@ -298,11 +298,22 @@
 
       .query { font-weight: bold; }
       </style>
+      
+      <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-21586743-1']);
+        _gaq.push(['_trackPageview']);
+        (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+      </script>
     </head>
     <body>
       <div id="content">
         <h1>
-          <a href="/">{Title}</a>        
+          <a href="/">Ruby on Rails <br />Hong Kong</a>        
         </h1>
         <div id="description">
           <div id="rss-link">
