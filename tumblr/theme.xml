@@ -15,374 +15,371 @@
   <meta name="viewport" content="width=800"/> <!-- iPhone -->
 
   <style type="text/css">
-  body {
-    margin: 0px;
-    background-color: rgb(189,11,11);
-    font-family: 'Lucida Grande', Helvetica, sans-serif;
-    background-image: -webkit-gradient(
-      linear,
-      left bottom,
-      right bottom,
-      color-stop(0.49, rgb(189,11,11)),
-      color-stop(0.82, rgb(92,0,0))
+    body {
+      margin: 0px;
+      background-color: rgb(189,11,11);
+      font-family: 'Lucida Grande', Helvetica, sans-serif;
+      background: -webkit-gradient(
+        linear,
+        left bottom,
+        right bottom,
+        color-stop(0.49, rgb(189,11,11)),
+        color-stop(0.82, rgb(92,0,0))
       );
-      background-image: -moz-linear-gradient(
+      background: -moz-linear-gradient(
         left center,
         rgb(189,11,11) 49%,
         rgb(92,0,0) 82%
-        );
-      }            
+      );
+    }
+    a {
+      color: #444;
+    }
 
-      a {
-        color: #444;
-      }
+    h1 {
+      text-align: left;
+      font: Bold 55px 'Trebuchet MS', Helvetica, sans-serif;
+      letter-spacing: -2px;
+      line-height: 50px;
+      position: relative;
+    }
 
-      h1 {
-        text-align: left;
-        font: Bold 55px 'Trebuchet MS', Helvetica, sans-serif;
-        letter-spacing: -2px;
-        line-height: 50px;
-        position: relative;
-      }
+    div#content {
+      width: 500px;
+      margin-left: 200px;
+      position: relative;
+      padding:15px 15px 15px;
+      background:#fff;
 
-      div#content {
-        width: 500px;
-        margin-left: 200px;
-        position: relative;
-        padding:15px 15px 15px;
-        background:#fff;
+    }
 
-      }
+    div#content div#description {
+      position: absolute;
+      right: -220px;
+      width: 200px;
+      text-align: left;
+      background : white;
+      padding : 5px ;
+    }
 
-      div#content div#description {
-        position: absolute;
-        right: -220px;
-        width: 200px;
-        text-align: left;
-        background : white;
-        padding : 5px ;
-      }
+    div#description {
+      font: normal 17px Helvetica,sans-serif;
+      line-height: 20px;
+      color: #444;
+    }
 
-      div#description {
-        font: normal 17px Helvetica,sans-serif;
-        line-height: 20px;
-        color: #444;
-      }
+    div#description a {
+      color: #444;
+    }
 
-      div#description a {
-        color: #444;
-      }
+    div#searchresultcount {
+      margin: 15px 0 30px;
+      text-align: center;
+    }
 
-      div#searchresultcount {
-        margin: 15px 0 30px;
-        text-align: center;
-      }
+    div.post {
+      position: relative;
+      margin-bottom: 40px;
+      padding-right: 20px;
+    }
 
-      div.post {
-        position: relative;
-        margin-bottom: 40px;
-        padding-right: 20px;
-      }
+    div.post div.date {
+      position: absolute;
+      left: -200px;
+      text-align: right;
+      width: 170px;                
+      white-space: nowrap;
+      font: normal 34px Helvetica, sans-serif;
+      letter-spacing: -2px;
+      color: #eee;
+      text-transform: uppercase;
+      line-height: 35px;
+    }
 
-      div.post div.date {
-        position: absolute;
-        left: -200px;
-        text-align: right;
-        width: 170px;                
-        white-space: nowrap;
-        font: normal 34px Helvetica, sans-serif;
-        letter-spacing: -2px;
-        color: #eee;
-        text-transform: uppercase;
-        line-height: 35px;
-      }
+    div.post div.date div.date_brick {
+      float: right;
+      height: 30px;
+      width: 45px;
+      background-color: #fff;
+      color: #666;
+      font: Bold 12px Verdana, Sans-Serif;
+      text-align: center;
+      line-height: 12px;
+      margin-left: 10px;
+      padding-top: 5px;
+      letter-spacing: 0px;
+      overflow: hidden;
+    }
 
-      div.post div.date div.date_brick {
-        float: right;
-        height: 30px;
-        width: 45px;
-        background-color: #fff;
-        color: #666;
-        font: Bold 12px Verdana, Sans-Serif;
-        text-align: center;
-        line-height: 12px;
-        margin-left: 10px;
-        padding-top: 5px;
-        letter-spacing: 0px;
-        overflow: hidden;
-      }
+    div.post img.permalink {
+      width: 14px;
+      height: 13px;
+      border-width: 0px;
+      background-color: #000;
+      display: none;
+      position: absolute;
+      right: 0px;
+      top: 0px;
+      z-index: 10;
+    }
 
-      div.post img.permalink {
-        width: 14px;
-        height: 13px;
-        border-width: 0px;
-        background-color: #000;
-        display: none;
-        position: absolute;
-        right: 0px;
-        top: 0px;
-        z-index: 10;
-      }
+    div.post:hover img.permalink {
+      display: inline;
+    }
 
-      div.post:hover img.permalink {
-        display: inline;
-      }
+    div.post h2 {
+      font-size: 18px;
+      font-weight: bold;
+      color: #666;
+      letter-spacing: -1px;
+      margin: 0px 0px 5px 0px;
+    }
 
-      div.post h2 {
-        font-size: 18px;
-        font-weight: bold;
-        color: #666;
-        letter-spacing: -1px;
-        margin: 0px 0px 5px 0px;
-      }
+    div.post h2 a {
+      color: #666;
+      text-decoration: none;
+    }
 
-      div.post h2 a {
-        color: #666;
-        text-decoration: none;
-      }
+    div.post div.caption {
+      font-size: 14px;
+      font-weight: bold;
+      color: #252525;
+      margin-top: 10px;
+      padding: 0px 20px 0px 20px;
+    }
 
-      div.post div.caption {
-        font-size: 14px;
-        font-weight: bold;
-        color: #252525;
-        margin-top: 10px;
-        padding: 0px 20px 0px 20px;
-      }
+    div.post div.caption a {
+      color: #252525;
+    }
 
-      div.post div.caption a {
-        color: #252525;
-      }
+    /* Regular Post */
 
-      /* Regular Post */
+    div.post div.regular {
+      font-size: 12px;
+      color: #252525;
+      line-height: 17px;
+    }
 
-      div.post div.regular {
-        font-size: 12px;
-        color: #252525;
-        line-height: 17px;
-      }
+    div.post div.regular blockquote {
+      font-style: italic;
+      border-left: solid 2px #252525;
+      padding-left: 10px;
+    }
 
-      div.post div.regular blockquote {
-        font-style: italic;
-        border-left: solid 2px #252525;
-        padding-left: 10px;
-      }
+    /* Quote Post */
 
-      /* Quote Post */
+    div.post div.quote div.quote_text {
+      font-family: Helvetica, sans-serif;
+      font-weight: bold;
+      color: #c00;
+      border-left: solid 5px #666;
+      padding-left: 10px;
+    }
 
-      div.post div.quote div.quote_text {
-        font-family: Helvetica, sans-serif;
-        font-weight: bold;
-        color: #c00;
-        border-left: solid 5px #666;
-        padding-left: 10px;
-      }
+    div.post div.quote div.quote_text span.short {
+      font-size: 36px;
+      line-height: 40px;
+      letter-spacing: -1px;
+    }
 
-      div.post div.quote div.quote_text span.short {
-        font-size: 36px;
-        line-height: 40px;
-        letter-spacing: -1px;
-      }
+    div.post div.quote div.quote_text span.medium {
+      font-size: 25px;
+      line-height: 27px;
+      letter-spacing: -1px;
+    }
 
-      div.post div.quote div.quote_text span.medium {
-        font-size: 25px;
-        line-height: 27px;
-        letter-spacing: -1px;
-      }
+    div.post div.quote div.quote_text span.long {
+      font-size: 16px;
+      line-height: 20px;
+    }
 
-      div.post div.quote div.quote_text span.long {
-        font-size: 16px;
-        line-height: 20px;
-      }
+    div.post div.quote div.quote_text a {
+      color: #c00;
+    }
 
-      div.post div.quote div.quote_text a {
-        color: #c00;
-      }
+    div.post div.quote div.source {
+      font-size: 16px;
+      font-weight: Bold;
+      color: #444;
+      margin-top: 5px;
+    }
 
-      div.post div.quote div.source {
-        font-size: 16px;
-        font-weight: Bold;
-        color: #444;
-        margin-top: 5px;
-      }
+    div.post div.quote div.source a {
+      color: #444;
+    }
 
-      div.post div.quote div.source a {
-        color: #444;
-      }
+    /* Link Post */
 
-      /* Link Post */
+    div.post div.link a.link {
+      font: Bold 20px Helvetica, sans-serif;
+      letter-spacing: -1px;
+      color: #c00;
+    }
 
-      div.post div.link a.link {
-        font: Bold 20px Helvetica, sans-serif;
-        letter-spacing: -1px;
-        color: #c00;
-      }
+    div.post div.link span.description {
+      font-size: 13px;
+      font-weight: normal;
+      letter-spacing: -1px;
+      color: #252525;
+    }
 
-      div.post div.link span.description {
-        font-size: 13px;
-        font-weight: normal;
-        letter-spacing: -1px;
-        color: #252525;
-      }
+    /* Conversation Post */
 
-      /* Conversation Post */
+    div.post div.conversation ul {
+      list-style-type: none;
+      margin: 0px;
+      padding: 0px 0px 0px 1px;
+      border-left: solid 5px #444;
+    }
 
-      div.post div.conversation ul {
-        list-style-type: none;
-        margin: 0px;
-        padding: 0px 0px 0px 1px;
-        border-left: solid 5px #444;
-      }
+    div.post div.conversation ul li {
+      font-size: 12px;
+      padding: 4px 10px 4px 8px;
+      color: #111;
+      margin-bottom: 1px;
+    }
 
-      div.post div.conversation ul li {
-        font-size: 12px;
-        padding: 4px 10px 4px 8px;
-        color: #111;
-        margin-bottom: 1px;
-      }
+    div.post div.conversation ul li span.label {
+      font-weight: bold;
+    }
 
-      div.post div.conversation ul li span.label {
-        font-weight: bold;
-      }
+    div.post div.conversation ul li span.user_1 {
+      color: #c00;
+    }
 
-      div.post div.conversation ul li span.user_1 {
-        color: #c00;
-      }
+    div.post div.conversation ul li span.user_2 {
+      color: #00c;
+    }
 
-      div.post div.conversation ul li span.user_2 {
-        color: #00c;
-      }
+    div.post div.conversation ul li span.user_3 {
+      color: #0a0;
+    }
 
-      div.post div.conversation ul li span.user_3 {
-        color: #0a0;
-      }
+    div.post div.conversation ul li.odd {
+      background-color: #f8f8f8;
+    }
 
-      div.post div.conversation ul li.odd {
-        background-color: #f8f8f8;
-      }
+    div.post div.conversation ul li.even {
+      background-color: #ddd;
+    }
 
-      div.post div.conversation ul li.even {
-        background-color: #ddd;
-      }
+    /* Video Post */
 
-      /* Video Post */
+    div.post div.video {
+      width: 400px;
+      margin: auto;
+    }
 
-      div.post div.video {
-        width: 400px;
-        margin: auto;
-      }
+    /* Footer */
 
-      /* Footer */
+    div#footer {
+      margin: 40px 0px 30px 0px;
+      text-align: center;
+      font-size: 15px;
+      font-weight: bold;
+      color: #252525;
+    }
 
-      div#footer {
-        margin: 40px 0px 30px 0px;
-        text-align: center;
-        font-size: 15px;
-        font-weight: bold;
-        color: #252525;
-      }
+    div#footer a {
+      text-decoration: none;
+      color: #252525;
+    }
 
-      div#footer a {
-        text-decoration: none;
-        color: #252525;
-      }
+    div#footer a:hover {
+      text-decoration: underline;
+    }
 
-      div#footer a:hover {
-        text-decoration: underline;
-      }
+    div#footer div#credit {
+      font: normal 13px Georgia, serif;
+      font-size: 13px;
+      margin-top: 15px;
+    }
 
-      div#footer div#credit {
-        font: normal 13px Georgia, serif;
-        font-size: 13px;
-        margin-top: 15px;
-      }
+    .query { font-weight: bold; }
+    
+    ul.rss-items {
+      padding: 5px ;
+    }
+    ul.rss-items li.rss-item {
+      font-size : 75%;
+      list-style: none;
+      text-align : left;
+      padding : 5px ;
+      margin : 5px ;
 
-      .query { font-weight: bold; }
-      </style>
-      
-      <script type="text/javascript">
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-21586743-1']);
-        _gaq.push(['_trackPageview']);
-        (function() {
-          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        })();
+      background-color : white ; 
+    }
+    ul.rss-items a {
+      font-weight : bold ;
+    }
+  </style>
+    
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-21586743-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+</head>
+<body>
+  <div id="content">
+    <h1>
+      <a href="/">Ruby on Rails <br />Hong Kong</a>        
+    </h1>
+    <div id="description">
+      <div id="rss-link">
+        <a href="/rss"><img src="/themes/5/rss.gif" id="rss" alt="RSS"/></a>
+      </div>
+      <div id="facebook-group-link">
+        <a href="http://www.facebook.com/home.php#/group.php?gid=4779923290"><img src="http://media.tumblr.com/C8dGm3a4lgzp6aapY8VmRDTAo1_250.png" alt="Facebook" /></a>
+      </div>
+      <div id="google-groups-link">
+        <a href="http://groups.google.com/group/hkror">
+          <img src="http://groups.google.com/groups/img/3nb/groups_bar.gif"
+          height=26 width=132 alt="{Description}">
+        </a>
+        <form action="http://groups.google.com/group/hkror/boxsubscribe">
+          Email: <input type=text name=email>
+          <br />
+          <input type=submit name="sub" value="Subscribe">
+        </form>
+      </div>
+
+      <!-- pull in the latest posts from the google group -->
+      <script src="http://feed2js.org//feed2js.php?src=https%3A%2F%2Fgroups.google.com%2Fgroup%2Fhkror%2Ffeed%2Frss_v2_0_topics.xml&amp;chan=title&amp;desc=50&amp;tz=+8&amp;utf=y&amp;css=hkror-group&amp;num=5" charset="UTF-8" type="text/javascript">
       </script>
-    </head>
-    <body>
-      <div id="content">
-        <h1>
-          <a href="/">Ruby on Rails <br />Hong Kong</a>        
-        </h1>
-        <div id="description">
-          <div id="rss-link">
-            <a href="/rss"><img src="/themes/5/rss.gif" id="rss" alt="RSS"/></a>
-          </div>
-          <div id="facebook-group-link">
-            <a href="http://www.facebook.com/home.php#/group.php?gid=4779923290"><img src="http://media.tumblr.com/C8dGm3a4lgzp6aapY8VmRDTAo1_250.png" alt="Facebook" /></a>
-          </div>
-          <div id="google-groups-link">
-            <a href="http://groups.google.com/group/hkror">
-              <img src="http://groups.google.com/groups/img/3nb/groups_bar.gif"
-              height=26 width=132 alt="{Description}">
-            </a>
-            <form action="http://groups.google.com/group/hkror/boxsubscribe">
-              Email: <input type=text name=email>
-              <br />
-              <input type=submit name="sub" value="Subscribe">
-            </form>
-          </div>
 
-          <!-- pull in the latest posts from the google group -->
-          <script src="http://feed2js.org//feed2js.php?src=https%3A%2F%2Fgroups.google.com%2Fgroup%2Fhkror%2Ffeed%2Frss_v2_0_topics.xml&amp;chan=title&amp;desc=50&amp;tz=+8&amp;utf=y&amp;css=hkror-group&amp;num=5" charset="UTF-8" type="text/javascript">
-          </script>
+      <p><a href="/archive">Archive</a></p>
 
-          <style type="text/css">
-          ul.rss-items {
-            padding: 5px ;
-          }
-          ul.rss-items li.rss-item {
-            font-size : 75%;
-            list-style: none;
-            text-align : left;
-            padding : 5px ;
-            margin : 5px ;
-
-            background-color : white ; 
-          }
-          ul.rss-items a {
-            font-weight : bold ;
-          }
-          </style>
-
-          <p><a href="/archive">Archive</a></p>
-
-          <div>
-            <div id="search">
-              <form action="/search" method="get">
-                <input type="text" name="q" value="{SearchQuery}"/>
-                <input type="submit" value="Search"/>
-              </form>
-            </div>
-
-            <div id="rorcraft">
-              <a href="http://www.rorcraft.com">
-                <img src="http://www.railsjob.com/images/rorcraft_ad.jpg" />
-              </a>
-            </div>
-            <div id="ankoder">
-              <a href="http://www.ankoder.com"><img src="http://www.railsjob.com/images/ankoder_ad.jpg" /></a>
-            </div>
-
-          </div>
+      <div>
+        <div id="search">
+          <form action="/search" method="get">
+            <input type="text" name="q" value="{SearchQuery}"/>
+            <input type="submit" value="Search"/>
+          </form>
         </div>
 
-        {block:SearchPage}
-        <div id="searchresultcount">
-          <p>Your search for <span class="query">{SearchQuery}</span> returned {SearchResultCount} result(s).</p>
+        <div id="rorcraft">
+          <a href="http://www.rorcraft.com">
+            <img src="http://www.railsjob.com/images/rorcraft_ad.jpg" />
+          </a>
         </div>
-        {/block:SearchPage}
+        <div id="ankoder">
+          <a href="http://www.ankoder.com"><img src="http://www.railsjob.com/images/ankoder_ad.jpg" /></a>
+        </div>
+
+      </div>
+    </div>
+
+    {block:SearchPage}
+    <div id="searchresultcount">
+      <p>Your search for <span class="query">{SearchQuery}</span> returned {SearchResultCount} result(s).</p>
+    </div>
+    {/block:SearchPage}
 
 {block:Posts}
 <div class="post">
