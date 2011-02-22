@@ -71,13 +71,18 @@
       color: #444;
     }
 
+    div#description .extra {
+    }
+    
+    #businesses img {
+      margin : auto ;
+      border : 5px solid white ;
+      width : 135px ;
+      height : 135px;
+    }
+    
     div#description a {
       color: #444;
-    }
-
-    div#searchresultcount {
-      margin: 15px 0 30px;
-      text-align: center;
     }
 
     div.post {
@@ -133,6 +138,7 @@
     }
 
     div.post h2 {
+      text-align : center ;
       font-size: 20px;
       font-weight: bold;
       color: #666;
@@ -273,32 +279,22 @@
     /* Footer */
 
     div#footer {
-      margin: 40px 0px 30px 0px;
+      margin: 0;
       text-align: center;
-      font-size: 15px;
-      font-weight: bold;
-      color: #252525;
+      padding : 0;
     }
-
     div#footer a {
-      text-decoration: none;
-      color: #252525;
+      color : white ;
     }
-
     div#footer a:hover {
-      text-decoration: underline;
-    }
-
-    div#footer div#credit {
-      font: normal 13px Georgia, serif;
-      font-size: 13px;
-      margin-top: 15px;
+      color : rgb(92,0,0);
     }
 
     .query { font-weight: bold; }
     
     ul.rss-items {
       padding: 5px ;
+      margin : 0 ;
     }
     ul.rss-items li.rss-item {
       font-size : 75%;
@@ -340,134 +336,138 @@
     {/block:HasPages}
     
     <div id="description">
-      <div id="rss-link">
+      <div id="rss-link" class="extra">
         <a href="/rss"><img src="/themes/5/rss.gif" id="rss" alt="RSS"/></a>
       </div>
-      <div id="facebook-group-link">
-        <a href="http://www.facebook.com/home.php#/group.php?gid=4779923290"><img src="http://media.tumblr.com/C8dGm3a4lgzp6aapY8VmRDTAo1_250.png" alt="Facebook" /></a>
-      </div>
-      <div id="google-groups-link">
+
+      <div id="google-group-box" class="extra">
         <a href="http://groups.google.com/group/hkror">
           <img src="http://groups.google.com/groups/img/3nb/groups_bar.gif"
           height=26 width=132 alt="{Description}">
         </a>
-        <form action="http://groups.google.com/group/hkror/boxsubscribe">
-          Email: <input type=text name=email>
-          <br />
-          <input type=submit name="sub" value="Subscribe">
-        </form>
+        <!-- pull in the latest posts from the google group -->
+        <script src="http://feed2js.org//feed2js.php?src=https%3A%2F%2Fgroups.google.com%2Fgroup%2Fhkror%2Ffeed%2Frss_v2_0_topics.xml&amp;desc=50&amp;tz=+8&amp;utf=y&amp;num=5" charset="UTF-8" type="text/javascript">
+        </script>
       </div>
 
-      <!-- pull in the latest posts from the google group -->
-      <script src="http://feed2js.org//feed2js.php?src=https%3A%2F%2Fgroups.google.com%2Fgroup%2Fhkror%2Ffeed%2Frss_v2_0_topics.xml&amp;chan=title&amp;desc=50&amp;tz=+8&amp;utf=y&amp;css=hkror-group&amp;num=5" charset="UTF-8" type="text/javascript">
-      </script>
-
-      <div id="rorcraft">
-        <a href="http://www.rorcraft.com">
-          <img src="http://www.railsjob.com/images/rorcraft_ad.jpg" />
-        </a>
+      <div id="businesses" class="extra">
+        <h3>Business using Rails in Hong Kong</h3>
+        <div id="thoughtsauce">
+          <a href="http://thought-sauce.com">
+            <img src="http://thought-sauce.com/images/bulb-1.jpg" />
+          </a>
+        </div>
+        <div id="rorcraft">
+          <a href="http://www.rorcraft.com">
+            <img src="http://www.railsjob.com/images/rorcraft_ad.jpg" />
+          </a>
+        </div>
+        <div id="ankoder">
+          <a href="http://www.ankoder.com">
+            <img src="http://www.railsjob.com/images/ankoder_ad.jpg" />
+          </a>
+        </div>
       </div>
-      <div id="ankoder">
-        <a href="http://www.ankoder.com"><img src="http://www.railsjob.com/images/ankoder_ad.jpg" /></a>
+    </div>
+
+  {block:Posts}
+  <div class="post">
+    {block:NewDayDate}
+    <div class="date">
+      <div class="date_brick">
+        {DayOfMonth}{DayOfMonthSuffix}<br />
+        {Year}
       </div>
+      {ShortMonth}
     </div>
+    {/block:NewDayDate}
 
-{block:Posts}
-<div class="post">
-  {block:NewDayDate}
-  <div class="date">
-    <div class="date_brick">
-      {DayOfMonth}{DayOfMonthSuffix}<br />
-      {Year}
+    <a href="{Permalink}"><img src="/themes/5/permalink.gif"
+      class="permalink" alt="permalink"/></a>
+
+      {block:Regular}
+      <div class="regular">
+        {block:Title}<h2><a href="{Permalink}">{Title}</a></h2>{/block:Title}
+        {Body}
+      </div>
+      {/block:Regular}
+
+      {block:Photo}
+      <div class="photo">
+        {LinkOpenTag}<img src="{PhotoURL-400}" alt="{PhotoAlt}"/>{LinkCloseTag}
+        {block:Caption}
+        <div class="caption">{Caption}</div>
+        {/block:Caption}
+      </div>
+      {/block:Photo}
+
+      {block:Quote}
+      <div class="quote">
+        <div class="quote_text"><span class="{Length}">{Quote}</span></div>
+        {block:Source}
+        <div class="source">&mdash; {Source}</div>
+        {/block:Source}
+      </div>
+      {/block:Quote}
+
+      {block:Link}
+      <div class="link">
+        <a href="{URL}" class="link" {Target}>{Name}</a>
+        {block:Description}
+        <span class="description">{Description}</span>
+        {/block:Description}
+      </div>
+      {/block:Link}
+
+      {block:Conversation}
+      <div class="conversation">
+        {block:Title}
+        <h2><a href="{Permalink}">{Title}</a></h2>
+        {/block:Title}
+        <ul>
+          {block:Lines}
+          <li class="{Alt}">
+            {block:Label}
+            <span class="label user_{UserNumber}">{Label}</span>
+            {/block:Label}
+            {Line}
+          </li>
+          {/block:Lines}
+        </ul>
+      </div>
+      {/block:Conversation}
+
+      {block:Audio}
+      <div class="audio">
+        {AudioPlayerBlack}
+        {block:Caption}
+        <div class="caption">{Caption}</div>
+        {/block:Caption}
+      </div>
+      {/block:Audio}
+
+      {block:Video}
+      <div class="video">
+        {Video-400}
+        {block:Caption}
+        <div class="caption">{Caption}</div>
+        {/block:Caption}
+      </div>
+      {/block:Video}
     </div>
-    {ShortMonth}
+    {/block:Posts}
+
+    {block:Pagination}
+      <div id="footer">
+        {block:PreviousPage}
+            <a href="{PreviousPage}">&#171; Previous</a>
+        {/block:PreviousPage}
+
+        {block:NextPage}
+            <a href="{NextPage}">Next &#187;</a>
+        {/block:NextPage}
+      </div>
+    {/block:Pagination}
   </div>
-  {/block:NewDayDate}
-
-  <a href="{Permalink}"><img src="/themes/5/permalink.gif"
-    class="permalink" alt="permalink"/></a>
-
-    {block:Regular}
-    <div class="regular">
-      {block:Title}<h2><a href="{Permalink}">{Title}</a></h2>{/block:Title}
-      {Body}
-    </div>
-    {/block:Regular}
-
-    {block:Photo}
-    <div class="photo">
-      {LinkOpenTag}<img src="{PhotoURL-400}" alt="{PhotoAlt}"/>{LinkCloseTag}
-      {block:Caption}
-      <div class="caption">{Caption}</div>
-      {/block:Caption}
-    </div>
-    {/block:Photo}
-
-    {block:Quote}
-    <div class="quote">
-      <div class="quote_text"><span class="{Length}">{Quote}</span></div>
-      {block:Source}
-      <div class="source">&mdash; {Source}</div>
-      {/block:Source}
-    </div>
-    {/block:Quote}
-
-    {block:Link}
-    <div class="link">
-      <a href="{URL}" class="link" {Target}>{Name}</a>
-      {block:Description}
-      <span class="description">{Description}</span>
-      {/block:Description}
-    </div>
-    {/block:Link}
-
-    {block:Conversation}
-    <div class="conversation">
-      {block:Title}
-      <h2><a href="{Permalink}">{Title}</a></h2>
-      {/block:Title}
-      <ul>
-        {block:Lines}
-        <li class="{Alt}">
-          {block:Label}
-          <span class="label user_{UserNumber}">{Label}</span>
-          {/block:Label}
-          {Line}
-        </li>
-        {/block:Lines}
-      </ul>
-    </div>
-    {/block:Conversation}
-
-    {block:Audio}
-    <div class="audio">
-      {AudioPlayerBlack}
-      {block:Caption}
-      <div class="caption">{Caption}</div>
-      {/block:Caption}
-    </div>
-    {/block:Audio}
-
-    {block:Video}
-    <div class="video">
-      {Video-400}
-      {block:Caption}
-      <div class="caption">{Caption}</div>
-      {/block:Caption}
-    </div>
-    {/block:Video}
-  </div>
-  {/block:Posts}
-
-  <div id="footer">
-    {block:PreviousPage}
-    <a href="{PreviousPage}">&#171; Previous</a> &nbsp;&nbsp;
-    {/block:PreviousPage}
-
-    {block:NextPage}
-    <a href="{NextPage}">Next &#187;</a>
-    {/block:NextPage}
-  </div>
-</div>
 </body>
 </html>
