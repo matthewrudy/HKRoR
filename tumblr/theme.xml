@@ -1,0 +1,496 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <meta name="google-site-verification" content="6iVVOttglvHlELHZDCe2AnTyKpk2dTVKUQEz4c4zExE" />
+        <!-- DEFAULT COLORS -->
+        <meta name="color:Background" content="#fff"/>
+        <meta name="color:Title" content="#444"/>
+        <meta name="color:Description" content="#777"/>
+        <meta name="color:Post Title" content="#6498cc"/>    
+        <meta name="color:Text" content="#444"/>
+        <meta name="color:Inline Link" content="#6498cc"/>
+        <meta name="color:Quote" content="#888"/>
+        <meta name="color:Quote Border" content="#6498cc"/>
+        <meta name="color:Quote Source" content="#555"/>
+        <meta name="color:Link Post" content="#c00"/>
+        <meta name="color:Conversation Background 1" content="#f4f4f4"/>
+        <meta name="color:Conversation Background 2" content="#e8e8e8"/>
+        <meta name="color:Conversation Border" content="#bbb"/>
+        <meta name="color:Conversation Text" content="#444"/>
+        <meta name="color:Date" content="#ccc"/>
+        <meta name="color:Date Block" content="#6498cc"/>
+        <meta name="color:Date Block Text" content="#bbd5f1"/>        
+        <!-- END DEFAULT COLORS -->
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title>{Title}{block:PostSummary} - {PostSummary}{/block:PostSummary}</title>
+        <link rel="icon" href="{Favicon}"/>
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="{RSS}"/>
+        <meta name="viewport" content="width=800"/> <!-- iPhone -->
+
+        <style type="text/css">
+            body {
+                margin: 0px;
+                background-color: {color:Background};
+                font-family: 'Lucida Grande', Helvetica, sans-serif;
+            }            
+
+            a {
+                color: {color:Inline Link};
+            }
+
+            h1 {
+                text-align: center;
+                font: Bold 55px 'Trebuchet MS', Helvetica, sans-serif;
+                letter-spacing: -2px;
+                line-height: 50px;
+                position: relative;
+            }
+            
+                h1 a {
+                    color: {color:Title};
+                    text-decoration: none;
+                    text-indent: -10000px;
+                    height:200px;
+                    width: 500px;
+                    display:block;
+                    background:#fff url(http://media.tumblr.com/C8dGm3a4lgznyry11vBMPV4po1_500.jpg) 0 0 no-repeat;
+                }
+                
+
+            div#content {
+                width: 500px;
+                margin: auto;
+                position: relative;
+                padding:15px 15px 15px;
+                background:#fff;
+                
+            }
+
+                div#content div#description {
+                    position: absolute;
+                    right: -170px;
+                    width: 160px;
+                    text-align: right;
+                }
+
+            div#description {
+                font: normal 17px Helvetica,sans-serif;
+                line-height: 20px;
+                color: {color:Description};
+            }
+
+                div#description a {
+                    color: {color:Description};
+                }
+
+						div#searchresultcount {
+							margin: 15px 0 30px;
+							text-align: center;
+						}
+            
+            div.post {
+                position: relative;
+                margin-bottom: 40px;
+                padding-right: 20px;
+            }
+
+                div.post div.date {
+                    position: absolute;
+                    left: -260px;
+                    text-align: right;
+                    width: 230px;                
+                    white-space: nowrap;
+                    font: normal 34px Helvetica, sans-serif;
+                    letter-spacing: -2px;
+                    color: {color:Date};
+                    text-transform: uppercase;
+                    line-height: 35px;
+                }
+                
+                    div.post div.date div.date_brick {
+                        float: right;
+                        height: 30px;
+                        width: 45px;
+                        background-color: {color:Date Block};
+                        color: {color:Date Block Text};
+                        font: Bold 12px Verdana, Sans-Serif;
+                        text-align: center;
+                        line-height: 12px;
+                        margin-left: 10px;
+                        padding-top: 5px;
+                        letter-spacing: 0px;
+                        overflow: hidden;
+                    }
+
+                div.post img.permalink {
+                    width: 14px;
+                    height: 13px;
+                    border-width: 0px;
+                    background-color: #000;
+                    display: none;
+                    position: absolute;
+                    right: 0px;
+                    top: 0px;
+                    z-index: 10;
+                }
+                
+                    div.post:hover img.permalink {
+                        display: inline;
+                    }
+
+                div.post h2 {
+                    font-size: 18px;
+                    font-weight: bold;
+                    color: {color:Post Title};
+                    letter-spacing: -1px;
+                    margin: 0px 0px 5px 0px;
+                }
+
+                    div.post h2 a {
+                        color: {color:Post Title};
+                        text-decoration: none;
+                    }
+            
+                div.post div.caption {
+                    font-size: 14px;
+                    font-weight: bold;
+                    color: {color:Text};
+                    margin-top: 10px;
+                    padding: 0px 20px 0px 20px;
+                }
+
+                    div.post div.caption a {
+                        color: {color:Text};
+                    }
+    
+            /* Regular Post */
+            
+                div.post div.regular {
+                    font-size: 12px;
+                    color: {color:Text};
+                    line-height: 17px;
+                }
+
+                    div.post div.regular blockquote {
+                        font-style: italic;
+                        border-left: solid 2px {color:Text};
+                        padding-left: 10px;
+                    }
+                        
+            /* Quote Post */
+            
+                div.post div.quote div.quote_text {
+                    font-family: Helvetica, sans-serif;
+                    font-weight: bold;
+                    color: {color:Quote};
+                    border-left: solid 5px {color:Quote Border};
+                    padding-left: 10px;
+                }
+                
+                    div.post div.quote div.quote_text span.short {
+                        font-size: 36px;
+                        line-height: 40px;
+                        letter-spacing: -1px;
+                    }
+                    
+                    div.post div.quote div.quote_text span.medium {
+                        font-size: 25px;
+                        line-height: 27px;
+                        letter-spacing: -1px;
+                    }
+                    
+                    div.post div.quote div.quote_text span.long {
+                        font-size: 16px;
+                        line-height: 20px;
+                    }
+
+                    div.post div.quote div.quote_text a {
+                        color: {color:Quote};
+                    }
+        
+                div.post div.quote div.source {
+                    font-size: 16px;
+                    font-weight: Bold;
+                    color: {color:Quote Source};
+                    margin-top: 5px;
+                }
+
+                    div.post div.quote div.source a {
+                        color: {color:Quote Source};
+                    }
+            
+            /* Link Post */
+            
+                div.post div.link a.link {
+                    font: Bold 20px Helvetica, sans-serif;
+                    letter-spacing: -1px;
+                    color: {color:Link Post};
+                }
+
+                    div.post div.link span.description {
+                        font-size: 13px;
+                        font-weight: normal;
+                        letter-spacing: -1px;
+                        color: {color:Text};
+                    }
+            
+            /* Conversation Post */
+                        
+                div.post div.conversation ul {
+                    list-style-type: none;
+                    margin: 0px;
+                    padding: 0px 0px 0px 1px;
+                    border-left: solid 5px {color:Conversation Border};
+                }
+            
+                    div.post div.conversation ul li {
+                        font-size: 12px;
+                        padding: 4px 10px 4px 8px;
+                        color: {color:Conversation Text};
+                        margin-bottom: 1px;
+                    }
+            
+                        div.post div.conversation ul li span.label {
+                            font-weight: bold;
+                        }
+                        
+                            div.post div.conversation ul li span.user_1 {
+                                color: #c00;
+                            }
+                            
+                            div.post div.conversation ul li span.user_2 {
+                                color: #00c;
+                            }
+                            
+                            div.post div.conversation ul li span.user_3 {
+                                color: #0a0;
+                            }
+                        
+                        div.post div.conversation ul li.odd {
+                            background-color: {color:Conversation Background 1};
+                        }
+
+                        div.post div.conversation ul li.even {
+                            background-color: {color:Conversation Background 2};
+                        }
+            
+            /* Video Post */
+            
+                div.post div.video {
+                    width: 400px;
+                    margin: auto;
+                }
+
+            /* Footer */
+            
+                div#footer {
+                    margin: 40px 0px 30px 0px;
+                    text-align: center;
+                    font-size: 15px;
+                    font-weight: bold;
+                    color: {color:Text};
+                }
+            
+                    div#footer a {
+                        text-decoration: none;
+                        color: {color:Text};
+                    }
+            
+                        div#footer a:hover {
+                            text-decoration: underline;
+                        }
+                    
+                    div#footer div#credit {
+                        font: normal 13px Georgia, serif;
+                        font-size: 13px;
+                        margin-top: 15px;
+                    }
+                    
+						.query { font-weight: bold; }
+						
+            {CustomCSS}
+        </style>
+    </head>
+    <body>
+ 
+        
+        <div id="content">
+        <h1>
+            <a href="/">{Title}</a>        
+        </h1>
+            <div id="description">
+<div><a href="/rss"><img src="/themes/5/rss.gif" id="rss" alt="RSS"/></a></div>
+<br />
+<div><a href="http://www.facebook.com/home.php#/group.php?gid=4779923290"><img src="http://media.tumblr.com/C8dGm3a4lgzp6aapY8VmRDTAo1_250.png" alt="Facebook" /></a></div>
+<br />
+<div>
+  <a href="http://groups.google.com/group/hkror"><img src="http://groups.google.com/groups/img/3nb/groups_bar.gif"
+         height=26 width=132 alt="{Description}"></a>
+  <form action="http://groups.google.com/group/hkror/boxsubscribe">
+  Email: <input type=text name=email>
+<br />
+  <input type=submit name="sub" value="Subscribe">
+
+</form>
+
+<!-- pull in the latest posts from the google group -->
+<script language="JavaScript" src="http://feed2js.org//feed2js.php?src=https%3A%2F%2Fgroups.google.com%2Fgroup%2Fhkror%2Ffeed%2Frss_v2_0_topics.xml&amp;chan=title&amp;desc=50&amp;tz=+8&amp;utf=y&amp;css=hkror-group&amp;num=5"  charset="UTF-8" type="text/javascript"></script>
+
+<style type="text/css">
+  ul.rss-items {
+    padding: 5px ;
+  }
+  ul.rss-items li.rss-item {
+    font-size : 75%;
+    list-style: none;
+    text-align : left;
+    padding : 5px ;
+    margin : 5px ;
+    
+    background-color : white ; 
+  }
+  ul.rss-items a {
+    font-weight : bold ;
+  }
+</style>
+
+</div>
+                
+										
+                    
+                    
+                    <p><a href="/archive">Archive</a></p>
+
+<div>
+										<div id="search">
+											<form action="/search" method="get">
+											    <input type="text" name="q" value="{SearchQuery}"/>
+											    <input type="submit" value="Search"/>
+											</form>
+										</div>
+
+             
+
+<div id="rorcraft">
+<a href="http://www.rorcraft.com"><img src="http://www.railsjob.com/images/rorcraft_ad.jpg" /></a>
+</div>
+<br />
+<div id="ankoder">
+<a href="http://www.ankoder.com"><img src="http://www.railsjob.com/images/ankoder_ad.jpg" /></a>
+            </div>
+
+   </div></div>
+
+						{block:SearchPage}
+						<div id="searchresultcount">
+							<p>Your search for <span class="query">{SearchQuery}</span> returned {SearchResultCount} result(s).</p>
+						</div>
+						{/block:SearchPage}
+            
+            {block:Posts}
+                <div class="post">
+                    {block:NewDayDate}
+
+                        <div class="date">
+                            <div class="date_brick">
+                                {ShortMonth}<br/>
+                                {DayOfMonth}{DayOfMonthSuffix}
+                            </div>
+                            {ShortDayOfWeek}
+                        </div>
+                    {/block:NewDayDate}
+                    
+                    <a href="{Permalink}"><img src="/themes/5/permalink.gif"
+                    class="permalink" alt="permalink"/></a>
+
+                    {block:Regular}
+                        <div class="regular">
+                            {block:Title}<h2><a href="{Permalink}">{Title}</a></h2>{/block:Title}
+                            {Body}
+                        </div>
+                    {/block:Regular}
+                    
+                    {block:Photo}
+                        <div class="photo">
+                            {LinkOpenTag}<img src="{PhotoURL-400}" alt="{PhotoAlt}"/>{LinkCloseTag}
+                            {block:Caption}
+                                <div class="caption">{Caption}</div>
+                            {/block:Caption}
+                        </div>
+                    {/block:Photo}
+                    
+                    {block:Quote}
+                        <div class="quote">
+                            <div class="quote_text"><span class="{Length}">{Quote}</span></div>
+                            {block:Source}
+                                <div class="source">&mdash; {Source}</div>
+                            {/block:Source}
+                        </div>
+                    {/block:Quote}
+                    
+                    {block:Link}
+                        <div class="link">
+                            <a href="{URL}" class="link" {Target}>{Name}</a>
+                            {block:Description}
+                                <span class="description">{Description}</span>
+                            {/block:Description}
+                        </div>
+                    {/block:Link}
+                    
+                    {block:Conversation}
+                        <div class="conversation">
+                            {block:Title}
+                                <h2><a href="{Permalink}">{Title}</a></h2>
+                            {/block:Title}
+                            <ul>
+                                {block:Lines}
+                                    <li class="{Alt}">
+                                        {block:Label}
+                                            <span class="label user_{UserNumber}">{Label}</span>
+                                        {/block:Label}
+                                        {Line}
+                                    </li>
+                                {/block:Lines}
+                            </ul>
+                        </div>
+                    {/block:Conversation}
+                    
+                    {block:Audio}
+                        <div class="audio">
+                            {AudioPlayerBlack}
+                            {block:Caption}
+                                <div class="caption">{Caption}</div>
+                            {/block:Caption}
+                        </div>
+                    {/block:Audio}
+                    
+                    {block:Video}
+                        <div class="video">
+                            {Video-400}
+                            {block:Caption}
+                                <div class="caption">{Caption}</div>
+                            {/block:Caption}
+                        </div>
+                    {/block:Video}
+                </div>
+            {/block:Posts}
+
+            <div id="footer">
+                {block:PreviousPage}
+                    <a href="{PreviousPage}">&#171; Previous</a> &nbsp;&nbsp;
+                {/block:PreviousPage}
+                
+                {block:NextPage}
+                    <a href="{NextPage}">Next &#187;</a>
+                {/block:NextPage}
+                
+                <div id="credit">              
+                    Powered by <a href="http://www.tumblr.com/"
+                    target="_blank">Tumblr</a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
