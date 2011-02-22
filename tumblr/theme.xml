@@ -40,7 +40,10 @@
     a:hover {
       color : rgb(92,0,0);
     }
-
+    a img {
+      border : none ;
+    }
+    
     h1 {
       text-align: left;
       font: bold 55px 'Trebuchet MS', Helvetica, sans-serif;
