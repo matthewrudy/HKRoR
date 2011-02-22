@@ -68,18 +68,27 @@
       right: -240px;
       width: 200px;
       text-align: left;
-      background : white;
       padding : 5px ;
       line-height: 20px;
       color: #444;
     }
 
+    #google-group-box {
+      background-color : white ;
+    }
+
     div#description .extra {
     }
     
-    #businesses img {
-      margin : auto ;
-      border : 5px solid white ;
+    #businesses h3 {
+      color : white ;
+    }
+    .business {
+      margin-bottom : 15px;
+      padding : 15px ;
+      background-color : white;
+    }
+    .business img {
       width : 135px ;
       height : 135px;
     }
@@ -335,19 +344,22 @@
 
       <div id="businesses" class="extra">
         <h3>Business using Rails in Hong Kong</h3>
-        <div id="thoughtsauce">
+        <div id="thoughtsauce" class="business">
           <a href="http://thought-sauce.com">
             <img src="http://thought-sauce.com/images/bulb-1.jpg" />
+            Thought-Sauce
           </a>
         </div>
-        <div id="rorcraft">
+        <div id="rorcraft" class="business">
           <a href="http://www.rorcraft.com">
             <img src="http://www.railsjob.com/images/rorcraft_ad.jpg" />
+            RoRcraft
           </a>
         </div>
-        <div id="ankoder">
+        <div id="ankoder" class="business">
           <a href="http://www.ankoder.com">
             <img src="http://www.railsjob.com/images/ankoder_ad.jpg" />
+            Ankoder
           </a>
         </div>
       </div>
