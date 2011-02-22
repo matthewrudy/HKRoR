@@ -33,7 +33,12 @@
       );
     }
     a {
-      color: #444;
+      color: rgb(189,11,11);
+      font-weight : bold;
+      text-decoration: none;
+    }
+    a:hover {
+      color : rgb(92,0,0);
     }
 
     h1 {
@@ -46,6 +51,7 @@
       padding : 15px ;
       margin : 0;
       margin-bottom : 15px ;
+      color : rgb(189,11,11);
     }
 
     div#content {
@@ -63,7 +69,6 @@
       text-align: left;
       background : white;
       padding : 5px ;
-      font: normal 17px Helvetica,sans-serif;
       line-height: 20px;
       color: #444;
     }
