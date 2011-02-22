@@ -83,10 +83,6 @@
       width : 135px ;
       height : 135px;
     }
-    
-    div#description a {
-      color: #444;
-    }
 
     div.post {
       position: relative;
@@ -158,10 +154,6 @@
       padding: 0px 20px 0px 20px;
     }
 
-    div.post div.caption a {
-      color: #252525;
-    }
-
     /* Regular Post */
 
     div.post div.regular {
@@ -202,21 +194,12 @@
       line-height: 20px;
     }
 
-    div.post div.quote div.quote_text a {
-      color: #c00;
-    }
-
     div.post div.quote div.source {
       font-size: 16px;
       font-weight: Bold;
       color: #444;
       margin-top: 5px;
     }
-
-    div.post div.quote div.source a {
-      color: #444;
-    }
-
     /* Link Post */
 
     div.post div.link a.link {
@@ -304,12 +287,9 @@
       list-style: none;
       text-align : left;
       padding : 5px ;
-      margin : 5px ;
+      margin : 0 ;
 
       background-color : white ; 
-    }
-    ul.rss-items a {
-      font-weight : bold ;
     }
   </style>
     
