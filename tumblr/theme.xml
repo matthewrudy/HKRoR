@@ -32,57 +32,60 @@
         <style type="text/css">
             body {
                 margin: 0px;
-                background-color: {color:Background};
+                background-color: #eee;
                 font-family: 'Lucida Grande', Helvetica, sans-serif;
+                background-image: -webkit-gradient(
+                    linear,
+                    left bottom,
+                    right bottom,
+                    color-stop(0.49, rgb(189,11,11)),
+                    color-stop(0.82, rgb(92,0,0))
+                );
+                background-image: -moz-linear-gradient(
+                    left center,
+                    rgb(189,11,11) 49%,
+                    rgb(92,0,0) 82%
+                );
             }            
 
             a {
-                color: {color:Inline Link};
+                color: #444;
             }
 
             h1 {
-                text-align: center;
+                text-align: left;
                 font: Bold 55px 'Trebuchet MS', Helvetica, sans-serif;
                 letter-spacing: -2px;
                 line-height: 50px;
                 position: relative;
             }
-            
-                h1 a {
-                    color: {color:Title};
-                    text-decoration: none;
-                    text-indent: -10000px;
-                    height:200px;
-                    width: 500px;
-                    display:block;
-                    background:#fff url(http://media.tumblr.com/C8dGm3a4lgznyry11vBMPV4po1_500.jpg) 0 0 no-repeat;
-                }
-                
 
             div#content {
                 width: 500px;
-                margin: auto;
+                margin-left: 200px;
                 position: relative;
                 padding:15px 15px 15px;
                 background:#fff;
                 
             }
 
-                div#content div#description {
-                    position: absolute;
-                    right: -170px;
-                    width: 160px;
-                    text-align: right;
-                }
+            div#content div#description {
+                position: absolute;
+                right: -220px;
+                width: 200px;
+                text-align: left;
+                background : white;
+                padding : 5px ;
+            }
 
             div#description {
                 font: normal 17px Helvetica,sans-serif;
                 line-height: 20px;
-                color: {color:Description};
+                color: #444;
             }
 
                 div#description a {
-                    color: {color:Description};
+                    color: #444;
                 }
 
 						div#searchresultcount {
@@ -98,13 +101,13 @@
 
                 div.post div.date {
                     position: absolute;
-                    left: -260px;
+                    left: -200px;
                     text-align: right;
-                    width: 230px;                
+                    width: 170px;                
                     white-space: nowrap;
                     font: normal 34px Helvetica, sans-serif;
                     letter-spacing: -2px;
-                    color: {color:Date};
+                    color: #eee;
                     text-transform: uppercase;
                     line-height: 35px;
                 }
@@ -113,8 +116,8 @@
                         float: right;
                         height: 30px;
                         width: 45px;
-                        background-color: {color:Date Block};
-                        color: {color:Date Block Text};
+                        background-color: #fff;
+                        color: #ccc;
                         font: Bold 12px Verdana, Sans-Serif;
                         text-align: center;
                         line-height: 12px;
@@ -143,39 +146,39 @@
                 div.post h2 {
                     font-size: 18px;
                     font-weight: bold;
-                    color: {color:Post Title};
+                    color: #666;
                     letter-spacing: -1px;
                     margin: 0px 0px 5px 0px;
                 }
 
                     div.post h2 a {
-                        color: {color:Post Title};
+                        color: #666;
                         text-decoration: none;
                     }
             
                 div.post div.caption {
                     font-size: 14px;
                     font-weight: bold;
-                    color: {color:Text};
+                    color: #252525;
                     margin-top: 10px;
                     padding: 0px 20px 0px 20px;
                 }
 
                     div.post div.caption a {
-                        color: {color:Text};
+                        color: #252525;
                     }
     
             /* Regular Post */
             
                 div.post div.regular {
                     font-size: 12px;
-                    color: {color:Text};
+                    color: #252525;
                     line-height: 17px;
                 }
 
                     div.post div.regular blockquote {
                         font-style: italic;
-                        border-left: solid 2px {color:Text};
+                        border-left: solid 2px #252525;
                         padding-left: 10px;
                     }
                         
@@ -184,8 +187,8 @@
                 div.post div.quote div.quote_text {
                     font-family: Helvetica, sans-serif;
                     font-weight: bold;
-                    color: {color:Quote};
-                    border-left: solid 5px {color:Quote Border};
+                    color: #c00;
+                    border-left: solid 5px #666;
                     padding-left: 10px;
                 }
                 
@@ -207,18 +210,18 @@
                     }
 
                     div.post div.quote div.quote_text a {
-                        color: {color:Quote};
+                        color: #c00;
                     }
         
                 div.post div.quote div.source {
                     font-size: 16px;
                     font-weight: Bold;
-                    color: {color:Quote Source};
+                    color: #444;
                     margin-top: 5px;
                 }
 
                     div.post div.quote div.source a {
-                        color: {color:Quote Source};
+                        color: #444;
                     }
             
             /* Link Post */
@@ -226,14 +229,14 @@
                 div.post div.link a.link {
                     font: Bold 20px Helvetica, sans-serif;
                     letter-spacing: -1px;
-                    color: {color:Link Post};
+                    color: #c00;
                 }
 
                     div.post div.link span.description {
                         font-size: 13px;
                         font-weight: normal;
                         letter-spacing: -1px;
-                        color: {color:Text};
+                        color: #252525;
                     }
             
             /* Conversation Post */
@@ -242,13 +245,13 @@
                     list-style-type: none;
                     margin: 0px;
                     padding: 0px 0px 0px 1px;
-                    border-left: solid 5px {color:Conversation Border};
+                    border-left: solid 5px #444;
                 }
             
                     div.post div.conversation ul li {
                         font-size: 12px;
                         padding: 4px 10px 4px 8px;
-                        color: {color:Conversation Text};
+                        color: #111;
                         margin-bottom: 1px;
                     }
             
@@ -269,11 +272,11 @@
                             }
                         
                         div.post div.conversation ul li.odd {
-                            background-color: {color:Conversation Background 1};
+                            background-color: #f8f8f8;
                         }
 
                         div.post div.conversation ul li.even {
-                            background-color: {color:Conversation Background 2};
+                            background-color: #ddd;
                         }
             
             /* Video Post */
@@ -290,12 +293,12 @@
                     text-align: center;
                     font-size: 15px;
                     font-weight: bold;
-                    color: {color:Text};
+                    color: #252525;
                 }
             
                     div#footer a {
                         text-decoration: none;
-                        color: {color:Text};
+                        color: #252525;
                     }
             
                         div#footer a:hover {
