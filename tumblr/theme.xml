@@ -38,31 +38,31 @@
 
     h1 {
       text-align: left;
-      font: Bold 55px 'Trebuchet MS', Helvetica, sans-serif;
+      font: bold 55px 'Trebuchet MS', Helvetica, sans-serif;
       letter-spacing: -2px;
       line-height: 50px;
       position: relative;
+      background-color : white;
+      padding : 15px ;
+      margin : 0;
+      margin-bottom : 15px ;
     }
 
     div#content {
       width: 500px;
       margin-left: 200px;
       position: relative;
-      padding:15px 15px 15px;
-      background:#fff;
-
+      padding : 15px ;
+      background : rgb(222, 11, 11);
     }
 
-    div#content div#description {
+    div#description {
       position: absolute;
-      right: -220px;
+      right: -240px;
       width: 200px;
       text-align: left;
       background : white;
       padding : 5px ;
-    }
-
-    div#description {
       font: normal 17px Helvetica,sans-serif;
       line-height: 20px;
       color: #444;
@@ -79,8 +79,10 @@
 
     div.post {
       position: relative;
-      margin-bottom: 40px;
-      padding-right: 20px;
+      background : white;
+      padding : 15px ;
+      padding-right : 20px ;
+      margin-bottom: 15px;
     }
 
     div.post div.date {
