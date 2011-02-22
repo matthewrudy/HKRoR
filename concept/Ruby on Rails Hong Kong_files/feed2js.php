@@ -1,0 +1,21 @@
+feed2js_ck = true;
+
+document.write('<div class="rss-box-hkror-group">');
+document.write('<p class="rss-title"><a class="rss-title" href="http://groups.google.com/group/hkror" target="_self">Hong Kong Ruby on Rails Google Group</a></p>');
+document.write('<ul class="rss-items">');
+document.write('<li class="rss-item"><a class="rss-item" href="http://groups.google.com/group/hkror/browse_thread/thread/921cbe3309337797/2a6895b06f1b82f2?show_docid=2a6895b06f1b82f2" target="_self">Tomorrow</a><br />');
+document.write('I need somewhere quiet to work tomorrow. Is bo...');
+document.write('</li>');
+document.write('<li class="rss-item"><a class="rss-item" href="http://groups.google.com/group/hkror/browse_thread/thread/fe13678dba7ebce0/341d7e7360063c27?show_docid=341d7e7360063c27" target="_self">[HKRoR] \"3 Common Rails + MySQL Mistakes\"</a><br />');
+document.write('I think I\'ve hit a few of these over the years....');
+document.write('</li>');
+document.write('<li class="rss-item"><a class="rss-item" href="http://groups.google.com/group/hkror/browse_thread/thread/53880144c74adcf7/3a749cf4f802641c?show_docid=3a749cf4f802641c" target="_self">February Ruby meetup with the Codeaholics - 24th February</a><br />');
+document.write('The February Codeaholics meetup will be held on...');
+document.write('</li>');
+document.write('<li class="rss-item"><a class="rss-item" href="http://groups.google.com/group/hkror/browse_thread/thread/ceff1816ea819aa3/60a61d769f45b14d?show_docid=60a61d769f45b14d" target="_self">RoR developers needed in Hong Kong</a><br />');
+document.write('Hello Everyone, Our company, Jetlun, is a star...');
+document.write('</li>');
+document.write('<li class="rss-item"><a class="rss-item" href="http://groups.google.com/group/hkror/browse_thread/thread/6e8817a9e34b978f/3053d075686cf509?show_docid=3053d075686cf509" target="_self">RoR developers in Hong Kong needed</a><br />');
+document.write('Hi - Our company is in search of RoR developers...');
+document.write('</li>');
+document.write('</ul></div>');
