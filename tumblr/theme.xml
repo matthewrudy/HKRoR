@@ -44,8 +44,6 @@
     h1 {
       text-align: left;
       font: bold 55px 'Trebuchet MS', Helvetica, sans-serif;
-      letter-spacing: -2px;
-      line-height: 50px;
       position: relative;
       background-color : white;
       padding : 15px ;
@@ -135,16 +133,12 @@
     }
 
     div.post h2 {
-      font-size: 18px;
+      font-size: 20px;
       font-weight: bold;
       color: #666;
-      letter-spacing: -1px;
-      margin: 0px 0px 5px 0px;
-    }
-
-    div.post h2 a {
-      color: #666;
-      text-decoration: none;
+      margin: 0 0 10px ;
+      padding-bottom : 10px;
+      border-bottom : 5px double rgb(189,11,11);
     }
 
     div.post div.caption {
@@ -164,7 +158,6 @@
     div.post div.regular {
       font-size: 12px;
       color: #252525;
-      line-height: 17px;
     }
 
     div.post div.regular blockquote {
@@ -337,6 +330,15 @@
     <h1>
       <a href="/">Ruby on Rails <br />Hong Kong</a>        
     </h1>
+    
+    {block:HasPages}
+      <div id="pages">
+        {block:Pages}
+          <a href="{URL}">{Label}</a>
+        {/block:Pages}
+      </div>
+    {/block:HasPages}
+    
     <div id="description">
       <div id="rss-link">
         <a href="/rss"><img src="/themes/5/rss.gif" id="rss" alt="RSS"/></a>
@@ -360,33 +362,15 @@
       <script src="http://feed2js.org//feed2js.php?src=https%3A%2F%2Fgroups.google.com%2Fgroup%2Fhkror%2Ffeed%2Frss_v2_0_topics.xml&amp;chan=title&amp;desc=50&amp;tz=+8&amp;utf=y&amp;css=hkror-group&amp;num=5" charset="UTF-8" type="text/javascript">
       </script>
 
-      <p><a href="/archive">Archive</a></p>
-
-      <div>
-        <div id="search">
-          <form action="/search" method="get">
-            <input type="text" name="q" value="{SearchQuery}"/>
-            <input type="submit" value="Search"/>
-          </form>
-        </div>
-
-        <div id="rorcraft">
-          <a href="http://www.rorcraft.com">
-            <img src="http://www.railsjob.com/images/rorcraft_ad.jpg" />
-          </a>
-        </div>
-        <div id="ankoder">
-          <a href="http://www.ankoder.com"><img src="http://www.railsjob.com/images/ankoder_ad.jpg" /></a>
-        </div>
-
+      <div id="rorcraft">
+        <a href="http://www.rorcraft.com">
+          <img src="http://www.railsjob.com/images/rorcraft_ad.jpg" />
+        </a>
+      </div>
+      <div id="ankoder">
+        <a href="http://www.ankoder.com"><img src="http://www.railsjob.com/images/ankoder_ad.jpg" /></a>
       </div>
     </div>
-
-    {block:SearchPage}
-    <div id="searchresultcount">
-      <p>Your search for <span class="query">{SearchQuery}</span> returned {SearchResultCount} result(s).</p>
-    </div>
-    {/block:SearchPage}
 
 {block:Posts}
 <div class="post">
