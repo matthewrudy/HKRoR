@@ -11,9 +11,7 @@
   {block:Description}
   <meta name="description" content="{MetaDescription}" />
   {/block:Description}
-
-  <meta name="viewport" content="width=800"/> <!-- iPhone -->
-
+  
   <style type="text/css">
     body {
       margin: 0px;
