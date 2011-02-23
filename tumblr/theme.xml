@@ -81,6 +81,16 @@
       display : block;
     }
     
+    #pages {
+      margin-bottom : 15px ;
+    }
+    #pages a {
+      color : white ;
+    }
+    #pages a:hover {
+      color : rgb(92,0,0);
+    }
+    
     #google-group-box {
       background-color : white ;
     }
