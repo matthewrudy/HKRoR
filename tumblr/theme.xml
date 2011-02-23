@@ -19,6 +19,7 @@
       margin: 0px;
       background-color: rgb(189,11,11);
       font-family: 'Lucida Grande', Helvetica, sans-serif;
+      background : url('http://hkror.thought-sauce.com/assets/gradient.png') rgb(161,8,8) top right repeat-y;
       background: -webkit-gradient(
         linear,
         left bottom,
@@ -77,15 +78,11 @@
       margin : 15px ;
     }
     #rss-link a {
-      background : url('http://thought-sauce.com/hkror/rss.png');
       width : 128px;
       height : 128px;
       display : block;
     }
-    #rss-link a span {
-      position : fixed ;
-      left : -5000px;
-    }
+    
     #google-group-box {
       background-color : white ;
     }
@@ -342,7 +339,7 @@
     
     <div id="description">
       <div id="rss-link" class="extra">
-        <a href="/rss"><span>RSS</span></a>
+        <a href="/rss"><img src="http://hkror.thought-sauce.com/assets/rss.png" /></a>
       </div>
 
       <div id="google-group-box" class="extra">
