@@ -73,6 +73,19 @@
       color: #444;
     }
 
+    #rss-link {
+      margin : 15px ;
+    }
+    #rss-link a {
+      background : url('http://thought-sauce.com/hkror/rss.png');
+      width : 128px;
+      height : 128px;
+      display : block;
+    }
+    #rss-link a span {
+      position : fixed ;
+      left : -5000px;
+    }
     #google-group-box {
       background-color : white ;
     }
@@ -329,7 +342,7 @@
     
     <div id="description">
       <div id="rss-link" class="extra">
-        <a href="/rss"><img src="http://thought-sauce.com/hkror/rss.png" id="rss" alt="RSS"/></a>
+        <a href="/rss"><span>RSS</span></a>
       </div>
 
       <div id="google-group-box" class="extra">
