@@ -105,10 +105,11 @@
       margin-bottom : 15px;
       padding : 15px ;
       background-color : white;
+      text-align : center;
     }
     .business img {
-      width : 135px ;
-      height : 135px;
+      width : 150px ;
+      height : 150px;
     }
 
     div.post {
@@ -361,23 +362,29 @@
       </div>
 
       <div id="businesses" class="extra">
-        <h3>Business using Rails in Hong Kong</h3>
+        <h3>Businesses using Rails in Hong Kong</h3>
         <div id="thoughtsauce" class="business">
           <a href="http://thought-sauce.com">
             <img src="http://thought-sauce.com/images/bulb-1.jpg" />
-            Thought-Sauce
+            <span>Thought-Sauce</span>
+          </a>
+        </div>
+        <div id="resumetracker" class="business">
+          <a href="http://www.resumetracker.com/">
+            <img src="http://hkror.thought-sauce.com/assets/businesses/resumetracker.png" />
+            <span>Resume Tracker</span>
           </a>
         </div>
         <div id="rorcraft" class="business">
           <a href="http://www.rorcraft.com">
             <img src="http://www.railsjob.com/images/rorcraft_ad.jpg" />
-            RoRcraft
+            <span>RoRcraft</span>
           </a>
         </div>
         <div id="ankoder" class="business">
           <a href="http://www.ankoder.com">
             <img src="http://www.railsjob.com/images/ankoder_ad.jpg" />
-            Ankoder
+            <span>Ankoder</span>
           </a>
         </div>
       </div>
@@ -480,5 +487,14 @@
       </div>
     {/block:Pagination}
   </div>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"> 
+  </script>
+  <script type="text/javascript" src="http://hkror.thought-sauce.com/assets/javascripts/jquery-shuffle.js">
+  </script>
+  <script type="text/javscript">
+    $(document).ready( function(){
+      $(".business").shuffle();
+    });
+  </script>
 </body>
 </html>
