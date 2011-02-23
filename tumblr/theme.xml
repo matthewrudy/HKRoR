@@ -377,9 +377,7 @@
     </div>
     {/block:NewDayDate}
 
-    <a href="{Permalink}"><img src="/themes/5/permalink.gif"
-      class="permalink" alt="permalink"/></a>
-
+    <a href="{Permalink}">
       {block:Regular}
       <div class="regular">
         {block:Title}<h2><a href="{Permalink}">{Title}</a></h2>{/block:Title}
