@@ -11,14 +11,13 @@
   {block:Description}
   <meta name="description" content="{MetaDescription}" />
   {/block:Description}
-
-  <meta name="viewport" content="width=800"/> <!-- iPhone -->
-
+  
   <style type="text/css">
     body {
       margin: 0px;
       background-color: rgb(189,11,11);
       font-family: 'Lucida Grande', Helvetica, sans-serif;
+      background : url('http://hkror.thought-sauce.com/assets/gradient.png') rgb(161,8,8) top right repeat-y;
       background: -webkit-gradient(
         linear,
         left bottom,
@@ -77,15 +76,21 @@
       margin : 15px ;
     }
     #rss-link a {
-      background : url('http://thought-sauce.com/hkror/rss.png');
       width : 128px;
       height : 128px;
       display : block;
     }
-    #rss-link a span {
-      position : fixed ;
-      left : -5000px;
+    
+    #pages {
+      margin-bottom : 15px ;
     }
+    #pages a {
+      color : white ;
+    }
+    #pages a:hover {
+      color : rgb(92,0,0);
+    }
+    
     #google-group-box {
       background-color : white ;
     }
@@ -100,10 +105,11 @@
       margin-bottom : 15px;
       padding : 15px ;
       background-color : white;
+      text-align : center;
     }
     .business img {
-      width : 135px ;
-      height : 135px;
+      width : 150px ;
+      height : 150px;
     }
 
     div.post {
@@ -342,7 +348,7 @@
     
     <div id="description">
       <div id="rss-link" class="extra">
-        <a href="/rss"><span>RSS</span></a>
+        <a href="/rss"><img src="http://hkror.thought-sauce.com/assets/rss.png" /></a>
       </div>
 
       <div id="google-group-box" class="extra">
@@ -356,23 +362,29 @@
       </div>
 
       <div id="businesses" class="extra">
-        <h3>Business using Rails in Hong Kong</h3>
+        <h3>Businesses using Rails in Hong Kong</h3>
         <div id="thoughtsauce" class="business">
           <a href="http://thought-sauce.com">
             <img src="http://thought-sauce.com/images/bulb-1.jpg" />
-            Thought-Sauce
+            <span>Thought-Sauce</span>
+          </a>
+        </div>
+        <div id="resumetracker" class="business">
+          <a href="http://www.resumetracker.com/">
+            <img src="http://hkror.thought-sauce.com/assets/businesses/resumetracker.png" />
+            <span>Resume Tracker</span>
           </a>
         </div>
         <div id="rorcraft" class="business">
           <a href="http://www.rorcraft.com">
             <img src="http://www.railsjob.com/images/rorcraft_ad.jpg" />
-            RoRcraft
+            <span>RoRcraft</span>
           </a>
         </div>
         <div id="ankoder" class="business">
           <a href="http://www.ankoder.com">
             <img src="http://www.railsjob.com/images/ankoder_ad.jpg" />
-            Ankoder
+            <span>Ankoder</span>
           </a>
         </div>
       </div>
@@ -390,9 +402,7 @@
     </div>
     {/block:NewDayDate}
 
-    <a href="{Permalink}"><img src="/themes/5/permalink.gif"
-      class="permalink" alt="permalink"/></a>
-
+    <a href="{Permalink}">
       {block:Regular}
       <div class="regular">
         {block:Title}<h2><a href="{Permalink}">{Title}</a></h2>{/block:Title}
@@ -477,5 +487,14 @@
       </div>
     {/block:Pagination}
   </div>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"> 
+  </script>
+  <script type="text/javascript" src="http://hkror.thought-sauce.com/assets/javascripts/jquery-shuffle.js">
+  </script>
+  <script type="text/javascript">
+    $(document).ready( function(){
+      $(".business").shuffle();
+    });
+  </script>
 </body>
 </html>
