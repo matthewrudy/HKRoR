@@ -12,6 +12,8 @@
   <meta name="description" content="{MetaDescription}" />
   {/block:Description}
   
+  <!-- designed with an extreme love of the colour red by Matthew Rudy Jacobs of Thought-Sauce.com -->
+  
   <style type="text/css">
     body {
       margin: 0px;
