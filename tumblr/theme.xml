@@ -72,7 +72,7 @@
       padding : 5px ;
       line-height: 20px;
       color: #444;
-      top : 0px;
+      top : 20px;
     }
 
     #rss-link {
